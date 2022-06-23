@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.addnewcar.AddCarFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/bg_searchview">
+
+        <ImageView
+            android:id="@+id/ivAddPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_add_image"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <EditText
+            android:id="@+id/etCarName"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:hint="Car Name"
+            android:inputType="text"
+            android:background="@drawable/custom_input"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textStyle="bold"
+            android:paddingStart="16dp"
+            app:layout_constraintTop_toBottomOf="@id/ivAddPhoto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etFuel"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:hint="Fuel"
+            android:inputType="textAutoComplete"
+            android:background="@drawable/custom_input"
+            android:paddingStart="16dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/etCarName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etDailyFee"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:hint="Daily Fee"
+            android:background="@drawable/custom_input"
+            android:paddingStart="16dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textStyle="bold"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@id/etFuel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etDeposit"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:hint="Deposit"
+            android:background="@drawable/custom_input"
+            android:paddingStart="16dp"
+            android:inputType="number"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/etDailyFee"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/btnAddCar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/etDeposit"
+            android:layout_marginTop="30dp"
+            android:enabled="false"
+            android:alpha="0.8"
+            android:text="Add a Car"
+            android:textAllCaps="false"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnAddCar"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
